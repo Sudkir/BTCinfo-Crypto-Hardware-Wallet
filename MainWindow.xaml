@@ -5,14 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BTCeks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="513.612" Width="800">
     <Grid>
         <TextBlock  HorizontalAlignment="Left" Margin="10,33,0,0" TextWrapping="Wrap" Text="Баланс:" VerticalAlignment="Top" />
-        <TextBlock HorizontalAlignment="Left" Margin="10,54,0,0" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Top" />
         <TextBlock x:Name="BalanceTxt" HorizontalAlignment="Left" Margin="83,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+        <TextBlock x:Name="ConfirmedBalanceTxt" HorizontalAlignment="Left" Margin="114,72,0,0" TextWrapping="Wrap" Text="0.0" VerticalAlignment="Top" />
         <ListBox x:Name="SellCoin" HorizontalAlignment="Left" Height="299" Margin="244,33,0,0" VerticalAlignment="Top" Width="523" />
-        <ListBox x:Name="GetCoin" HorizontalAlignment="Left" Height="71" Margin="20,205,0,0" VerticalAlignment="Top" Width="112" />
-        <TextBox x:Name="AddressTxt" HorizontalAlignment="Left" Height="42" Margin="48,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" />
-        <Button Content="Проверить" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" />
+        <TextBlock  HorizontalAlignment="Left" Margin="10,57,0,0" TextWrapping="Wrap" Text="Баланс не подтвержденный:" VerticalAlignment="Top" Height="37" Width="104" />
+        <TextBox x:Name="NewAdres" HorizontalAlignment="Left" Height="36" Margin="10,111,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="133" />
+        <TextBox x:Name="NewPK" HorizontalAlignment="Left" Height="36" Margin="10,152,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="133" />
+        <StackPanel HorizontalAlignment="Left" Height="143" Margin="470,337,0,0" VerticalAlignment="Top" Width="297">
+            <TextBlock TextWrapping="Wrap" Text="Введите пароль" />
+            <TextBox x:Name="Pass" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap"  VerticalAlignment="Top" Width="287" />
+            <TextBlock TextWrapping="Wrap" Text="Ваш адрес" />
+            <TextBox x:Name="Add" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap"  VerticalAlignment="Top" Width="287" />
+            <Button Content="Войти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Connect" />
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="143" Margin="239,337,0,0" VerticalAlignment="Top" Width="226">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Введите адрес" VerticalAlignment="Top" />
+            <TextBox x:Name="AddressTxt" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="216" />
+            <Button Content="Проверить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click" />
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="143" Margin="10,337,0,0" VerticalAlignment="Top" Width="224">
+            <TextBlock TextWrapping="Wrap" Text="Введите адрес" />
+            <TextBox Height="42" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="216" />
+            <TextBlock TextWrapping="Wrap"><Run Text="Кол-во " /><Run Text="BTC" /></TextBlock>
+            <TextBox Height="23" TextWrapping="Wrap" />
+            <Button Content="отправить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="PayBtn" />
+        </StackPanel>
     </Grid>
 </Window>
